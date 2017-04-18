@@ -117,12 +117,12 @@
 <tspan x="10" y="1834">  │ │ │ └── callsites@0.2.0 </tspan>
 <tspan x="10" y="1850">  │ │ └── resolve-from@1.0.1 </tspan>
 <tspan x="10" y="1866">  │ ├─┬ shelljs@0.7.7 </tspan>
-<tspan x="10" y="1882">  │ │ ├── interpret@1.0.2 </tspan>
+<tspan x="10" y="1882">  │ │ ├── interpret@1.0.3 </tspan>
 <tspan x="10" y="1898">  │ │ └── rechoir@0.6.2 </tspan>
 <tspan x="10" y="1914">  │ ├── strip-bom@3.0.0 </tspan>
 <tspan x="10" y="1930">  │ ├── strip-json-comments@2.0.1 </tspan>
 <tspan x="10" y="1946">  │ ├─┬ table@3.8.3 </tspan>
-<tspan x="10" y="1962">  │ │ ├─┬ ajv@4.11.6 </tspan>
+<tspan x="10" y="1962">  │ │ ├─┬ ajv@4.11.7 </tspan>
 <tspan x="10" y="1978">  │ │ │ └── co@4.6.0 </tspan>
 <tspan x="10" y="1994">  │ │ ├── ajv-keywords@1.5.1 </tspan>
 <tspan x="10" y="2010">  │ │ ├── slice-ansi@0.0.4 </tspan>
@@ -206,7 +206,7 @@
 <tspan x="10" y="3258">  │ ├── map-obj@1.0.1 </tspan>
 <tspan x="10" y="3274">  │ ├── minimist@1.2.0 </tspan>
 <tspan x="10" y="3290">  │ ├─┬ normalize-package-data@2.3.6 </tspan>
-<tspan x="10" y="3306">  │ │ ├── hosted-git-info@2.4.1 </tspan>
+<tspan x="10" y="3306">  │ │ ├── hosted-git-info@2.4.2 </tspan>
 <tspan x="10" y="3322">  │ │ ├── is-builtin-module@1.0.0 </tspan>
 <tspan x="10" y="3338">  │ │ ├── semver@5.3.0 </tspan>
 <tspan x="10" y="3354">  │ │ └─┬ validate-npm-package-license@3.0.1 </tspan>
@@ -266,7 +266,7 @@
 <tspan x="10" y="4218">  │ │   └── slide@1.1.6 </tspan>
 <tspan x="10" y="4234">  │ ├── is-npm@1.0.0 </tspan>
 <tspan x="10" y="4250">  │ ├─┬ latest-version@3.1.0 </tspan>
-<tspan x="10" y="4266">  │ │ └─┬ package-json@4.0.0 </tspan>
+<tspan x="10" y="4266">  │ │ └─┬ package-json@4.0.1 </tspan>
 <tspan x="10" y="4282">  │ │   ├─┬ got@6.7.1 </tspan>
 <tspan x="10" y="4298">  │ │   │ ├─┬ create-error-class@3.0.2 </tspan>
 <tspan x="10" y="4314">  │ │   │ │ └── capture-stack-trace@1.0.0 </tspan>

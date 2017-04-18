@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-xo/xo/options-manager.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-xo/node_modules/xo/options-manager.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-xo">npmtest-xo (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-xo/xo/options-manager.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-xo/node_modules/xo/options-manager.js</span></h1>
     <h2>
         
         Statements: <span class="metric">28.93% <small>(35 / 121)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-xo/xo/</a> &#187; options-manager.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-xo/node_modules/xo/</a> » options-manager.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -786,7 +784,7 @@ const DEFAULT_EXTENSION = [
 const DEFAULT_CONFIG = {
 	useEslintrc: false,
 	cache: true,
-	cacheLocation: path.join(os.homedir() || <span class="branch-1 cbranch-no" title="branch not covered" >os.tmpdir(),</span> '.xo-cache/'),
+	cacheLocation: path.join(os.homedir() || <span class="branch-1 cbranch-no" title="branch not covered">os.tmpdir(),</span> '.xo-cache/'),
 	baseConfig: {
 		extends: [
 			'xo',
@@ -797,10 +795,10 @@ const DEFAULT_CONFIG = {
 };
 &nbsp;
 const normalizeOpts = opts =&gt; {
-<span class="cstat-no" title="statement not covered" >	opts = Object.assign({}, opts);</span>
+<span class="cstat-no" title="statement not covered">	opts = Object.assign({}, opts);</span>
 &nbsp;
 	// Alias to help humans
-<span class="cstat-no" title="statement not covered" >	[</span>
+<span class="cstat-no" title="statement not covered">	[</span>
 		'env',
 		'global',
 		'ignore',
@@ -810,33 +808,33 @@ const normalizeOpts = opts =&gt; {
 		'extend',
 		'extension'
 	].forEach(singular =&gt; {
-<span class="cstat-no" title="statement not covered" >		const plural = singular + 's';</span>
-<span class="cstat-no" title="statement not covered" >		let value = opts[plural] || opts[singular];</span>
+<span class="cstat-no" title="statement not covered">		const plural = singular + 's';</span>
+<span class="cstat-no" title="statement not covered">		let value = opts[plural] || opts[singular];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		delete opts[singular];</span>
+<span class="cstat-no" title="statement not covered">		delete opts[singular];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (value === undefined) {</span>
-<span class="cstat-no" title="statement not covered" >			return;</span>
+<span class="cstat-no" title="statement not covered">		if (value === undefined) {</span>
+<span class="cstat-no" title="statement not covered">			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (singular !== 'rule' &amp;&amp; singular !== 'setting') {</span>
-<span class="cstat-no" title="statement not covered" >			value = arrify(value);</span>
+<span class="cstat-no" title="statement not covered">		if (singular !== 'rule' &amp;&amp; singular !== 'setting') {</span>
+<span class="cstat-no" title="statement not covered">			value = arrify(value);</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		opts[plural] = value;</span>
+<span class="cstat-no" title="statement not covered">		opts[plural] = value;</span>
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return opts;</span>
+<span class="cstat-no" title="statement not covered">	return opts;</span>
 }
 &nbsp;
 const mergeWithPkgConf = opts =&gt; {
-<span class="cstat-no" title="statement not covered" >	opts = Object.assign({cwd: process.cwd()}, opts);</span>
-<span class="cstat-no" title="statement not covered" >	const conf = pkgConf.sync('xo', {cwd: opts.cwd, skipOnFalse: true});</span>
-<span class="cstat-no" title="statement not covered" >	return Object.assign({}, conf, opts);</span>
+<span class="cstat-no" title="statement not covered">	opts = Object.assign({cwd: process.cwd()}, opts);</span>
+<span class="cstat-no" title="statement not covered">	const conf = pkgConf.sync('xo', {cwd: opts.cwd, skipOnFalse: true});</span>
+<span class="cstat-no" title="statement not covered">	return Object.assign({}, conf, opts);</span>
 }
 &nbsp;
 // Define the shape of deep properties for deepAssign
-const emptyOptions = () =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+const emptyOptions = () =&gt; (<span class="cstat-no" title="statement not covered">{</span>
 	rules: {},
 	settings: {},
 	globals: [],
@@ -846,79 +844,79 @@ const emptyOptions = () =&gt; (<span class="cstat-no" title="statement not cover
 });
 &nbsp;
 const buildConfig = opts =&gt; {
-<span class="cstat-no" title="statement not covered" >	const config = deepAssign(</span>
+<span class="cstat-no" title="statement not covered">	const config = deepAssign(</span>
 		emptyOptions(),
 		DEFAULT_CONFIG,
 		opts
 	);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (opts.space) {</span>
-<span class="cstat-no" title="statement not covered" >		const spaces = typeof opts.space === 'number' ? opts.space : 2;</span>
-<span class="cstat-no" title="statement not covered" >		config.rules.indent = ['error', spaces, {SwitchCase: 1}];</span>
+<span class="cstat-no" title="statement not covered">	if (opts.space) {</span>
+<span class="cstat-no" title="statement not covered">		const spaces = typeof opts.space === 'number' ? opts.space : 2;</span>
+<span class="cstat-no" title="statement not covered">		config.rules.indent = ['error', spaces, {SwitchCase: 1}];</span>
 &nbsp;
 		// Only apply if the user has the React plugin
-<span class="cstat-no" title="statement not covered" >		if (opts.cwd &amp;&amp; resolveFrom(opts.cwd, 'eslint-plugin-react')) {</span>
-<span class="cstat-no" title="statement not covered" >			config.plugins = config.plugins.concat('react');</span>
-<span class="cstat-no" title="statement not covered" >			config.rules['react/jsx-indent-props'] = ['error', spaces];</span>
-<span class="cstat-no" title="statement not covered" >			config.rules['react/jsx-indent'] = ['error', spaces];</span>
+<span class="cstat-no" title="statement not covered">		if (opts.cwd &amp;&amp; resolveFrom(opts.cwd, 'eslint-plugin-react')) {</span>
+<span class="cstat-no" title="statement not covered">			config.plugins = config.plugins.concat('react');</span>
+<span class="cstat-no" title="statement not covered">			config.rules['react/jsx-indent-props'] = ['error', spaces];</span>
+<span class="cstat-no" title="statement not covered">			config.rules['react/jsx-indent'] = ['error', spaces];</span>
 		}
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (opts.semicolon === false) {</span>
-<span class="cstat-no" title="statement not covered" >		config.rules.semi = ['error', 'never'];</span>
-<span class="cstat-no" title="statement not covered" >		config.rules['semi-spacing'] = ['error', {</span>
+<span class="cstat-no" title="statement not covered">	if (opts.semicolon === false) {</span>
+<span class="cstat-no" title="statement not covered">		config.rules.semi = ['error', 'never'];</span>
+<span class="cstat-no" title="statement not covered">		config.rules['semi-spacing'] = ['error', {</span>
 			before: false,
 			after: true
 		}];
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (opts.esnext !== false) {</span>
-<span class="cstat-no" title="statement not covered" >		config.baseConfig.extends = ['xo/esnext', path.join(__dirname, 'config/plugins.js')];</span>
+<span class="cstat-no" title="statement not covered">	if (opts.esnext !== false) {</span>
+<span class="cstat-no" title="statement not covered">		config.baseConfig.extends = ['xo/esnext', path.join(__dirname, 'config/plugins.js')];</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (opts.rules) {</span>
-<span class="cstat-no" title="statement not covered" >		Object.assign(config.rules, opts.rules);</span>
+<span class="cstat-no" title="statement not covered">	if (opts.rules) {</span>
+<span class="cstat-no" title="statement not covered">		Object.assign(config.rules, opts.rules);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (opts.settings) {</span>
-<span class="cstat-no" title="statement not covered" >		config.baseConfig.settings = opts.settings;</span>
+<span class="cstat-no" title="statement not covered">	if (opts.settings) {</span>
+<span class="cstat-no" title="statement not covered">		config.baseConfig.settings = opts.settings;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (opts.parser) {</span>
-<span class="cstat-no" title="statement not covered" >		config.baseConfig.parser = opts.parser;</span>
+<span class="cstat-no" title="statement not covered">	if (opts.parser) {</span>
+<span class="cstat-no" title="statement not covered">		config.baseConfig.parser = opts.parser;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	if (opts.extends &amp;&amp; opts.extends.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">	if (opts.extends &amp;&amp; opts.extends.length &gt; 0) {</span>
 		// TODO: this logic needs to be improved, preferably use the same code as ESLint
 		// user's configs must be resolved to their absolute paths
-<span class="cstat-no" title="statement not covered" >		const configs = opts.extends.map(name =&gt; {</span>
+<span class="cstat-no" title="statement not covered">		const configs = opts.extends.map(name =&gt; {</span>
 			// Don't do anything if it's a filepath
-<span class="cstat-no" title="statement not covered" >			if (pathExists.sync(name)) {</span>
-<span class="cstat-no" title="statement not covered" >				return name;</span>
+<span class="cstat-no" title="statement not covered">			if (pathExists.sync(name)) {</span>
+<span class="cstat-no" title="statement not covered">				return name;</span>
 			}
 &nbsp;
 			// Don't do anything if it's a config from a plugin
-<span class="cstat-no" title="statement not covered" >			if (name.startsWith('plugin:')) {</span>
-<span class="cstat-no" title="statement not covered" >				return name;</span>
+<span class="cstat-no" title="statement not covered">			if (name.startsWith('plugin:')) {</span>
+<span class="cstat-no" title="statement not covered">				return name;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!name.includes('eslint-config-')) {</span>
-<span class="cstat-no" title="statement not covered" >				name = `eslint-config-${name}`;</span>
+<span class="cstat-no" title="statement not covered">			if (!name.includes('eslint-config-')) {</span>
+<span class="cstat-no" title="statement not covered">				name = `eslint-config-${name}`;</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			const ret = resolveFrom(opts.cwd, name);</span>
+<span class="cstat-no" title="statement not covered">			const ret = resolveFrom(opts.cwd, name);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			if (!ret) {</span>
-<span class="cstat-no" title="statement not covered" >				throw new Error(`Couldn't find ESLint config: ${name}`);</span>
+<span class="cstat-no" title="statement not covered">			if (!ret) {</span>
+<span class="cstat-no" title="statement not covered">				throw new Error(`Couldn't find ESLint config: ${name}`);</span>
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			return ret;</span>
+<span class="cstat-no" title="statement not covered">			return ret;</span>
 		});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		config.baseConfig.extends = config.baseConfig.extends.concat(configs);</span>
+<span class="cstat-no" title="statement not covered">		config.baseConfig.extends = config.baseConfig.extends.concat(configs);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return config;</span>
+<span class="cstat-no" title="statement not covered">	return config;</span>
 }
 &nbsp;
 // Builds a list of overrides for a particular path, and a hash value.
@@ -926,86 +924,86 @@ const buildConfig = opts =&gt; {
 //
 // If overrides.length === 4, and only the first and third elements apply, then our hash is: 1010 (in binary)
 const findApplicableOverrides = (path, overrides) =&gt; {
-<span class="cstat-no" title="statement not covered" >	let hash = 0;</span>
-<span class="cstat-no" title="statement not covered" >	const applicable = [];</span>
+<span class="cstat-no" title="statement not covered">	let hash = 0;</span>
+<span class="cstat-no" title="statement not covered">	const applicable = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	overrides.forEach(override =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >		hash &lt;&lt;= 1;</span>
+<span class="cstat-no" title="statement not covered">	overrides.forEach(override =&gt; {</span>
+<span class="cstat-no" title="statement not covered">		hash &lt;&lt;= 1;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (multimatch(path, override.files).length &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered" >			applicable.push(override);</span>
-<span class="cstat-no" title="statement not covered" >			hash |= 1;</span>
+<span class="cstat-no" title="statement not covered">		if (multimatch(path, override.files).length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered">			applicable.push(override);</span>
+<span class="cstat-no" title="statement not covered">			hash |= 1;</span>
 		}
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return {</span>
+<span class="cstat-no" title="statement not covered">	return {</span>
 		hash,
 		applicable
 	};
 }
 &nbsp;
 const mergeApplicableOverrides = (baseOptions, applicableOverrides) =&gt; {
-<span class="cstat-no" title="statement not covered" >	applicableOverrides = applicableOverrides.map(normalizeOpts);</span>
-<span class="cstat-no" title="statement not covered" >	const overrides = [emptyOptions(), baseOptions].concat(applicableOverrides);</span>
-<span class="cstat-no" title="statement not covered" >	return deepAssign.apply(null, overrides);</span>
+<span class="cstat-no" title="statement not covered">	applicableOverrides = applicableOverrides.map(normalizeOpts);</span>
+<span class="cstat-no" title="statement not covered">	const overrides = [emptyOptions(), baseOptions].concat(applicableOverrides);</span>
+<span class="cstat-no" title="statement not covered">	return deepAssign.apply(null, overrides);</span>
 }
 &nbsp;
 // Creates grouped sets of merged options together with the paths they apply to.
 const groupConfigs = (paths, baseOptions, overrides) =&gt; {
-<span class="cstat-no" title="statement not covered" >	const map = {};</span>
-<span class="cstat-no" title="statement not covered" >	const arr = [];</span>
+<span class="cstat-no" title="statement not covered">	const map = {};</span>
+<span class="cstat-no" title="statement not covered">	const arr = [];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	paths.forEach(x =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >		const data = findApplicableOverrides(x, overrides);</span>
+<span class="cstat-no" title="statement not covered">	paths.forEach(x =&gt; {</span>
+<span class="cstat-no" title="statement not covered">		const data = findApplicableOverrides(x, overrides);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		if (!map[data.hash]) {</span>
-<span class="cstat-no" title="statement not covered" >			const mergedOpts = mergeApplicableOverrides(baseOptions, data.applicable);</span>
-<span class="cstat-no" title="statement not covered" >			delete mergedOpts.files;</span>
+<span class="cstat-no" title="statement not covered">		if (!map[data.hash]) {</span>
+<span class="cstat-no" title="statement not covered">			const mergedOpts = mergeApplicableOverrides(baseOptions, data.applicable);</span>
+<span class="cstat-no" title="statement not covered">			delete mergedOpts.files;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >			arr.push(map[data.hash] = {</span>
+<span class="cstat-no" title="statement not covered">			arr.push(map[data.hash] = {</span>
 				opts: mergedOpts,
 				paths: []
 			});
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		map[data.hash].paths.push(x);</span>
+<span class="cstat-no" title="statement not covered">		map[data.hash].paths.push(x);</span>
 	});
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return arr;</span>
+<span class="cstat-no" title="statement not covered">	return arr;</span>
 }
 &nbsp;
 const getIgnores = opts =&gt; {
-<span class="cstat-no" title="statement not covered" >	opts.ignores = DEFAULT_IGNORE.concat(opts.ignores || []);</span>
-<span class="cstat-no" title="statement not covered" >	return opts;</span>
+<span class="cstat-no" title="statement not covered">	opts.ignores = DEFAULT_IGNORE.concat(opts.ignores || []);</span>
+<span class="cstat-no" title="statement not covered">	return opts;</span>
 }
 &nbsp;
-const getGitIgnores = opts =&gt; <span class="cstat-no" title="statement not covered" >globby</span>
+const getGitIgnores = opts =&gt; <span class="cstat-no" title="statement not covered">globby</span>
 	.sync('**/.gitignore', {
 		ignore: opts.ignores || [],
 		cwd: opts.cwd || process.cwd()
 	})
 	.map(pathToGitignore =&gt; {
-<span class="cstat-no" title="statement not covered" >		const patterns = parseGitignore(pathToGitignore);</span>
-<span class="cstat-no" title="statement not covered" >		const base = path.dirname(pathToGitignore);</span>
+<span class="cstat-no" title="statement not covered">		const patterns = parseGitignore(pathToGitignore);</span>
+<span class="cstat-no" title="statement not covered">		const base = path.dirname(pathToGitignore);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >		return patterns</span>
+<span class="cstat-no" title="statement not covered">		return patterns</span>
 			.map(pattern =&gt; {
-<span class="cstat-no" title="statement not covered" >				const negate = !pattern.startsWith('!');</span>
-<span class="cstat-no" title="statement not covered" >				const patternPath = negate ? pattern : pattern.substr(1);</span>
-<span class="cstat-no" title="statement not covered" >				return {negate, pattern: path.join(base, patternPath)};</span>
+<span class="cstat-no" title="statement not covered">				const negate = !pattern.startsWith('!');</span>
+<span class="cstat-no" title="statement not covered">				const patternPath = negate ? pattern : pattern.substr(1);</span>
+<span class="cstat-no" title="statement not covered">				return {negate, pattern: path.join(base, patternPath)};</span>
 			})
-			.sort(pattern =&gt; <span class="cstat-no" title="statement not covered" >pattern.negate ? 1 : -1)</span>
-			.map(item =&gt; <span class="cstat-no" title="statement not covered" >item.negate ? `!${item.pattern}` : item.pattern)</span>;
+			.sort(pattern =&gt; <span class="cstat-no" title="statement not covered">pattern.negate ? 1 : -1)</span>
+			.map(item =&gt; <span class="cstat-no" title="statement not covered">item.negate ? `!${item.pattern}` : item.pattern)</span>;
 	})
-	.reduce((a, b) =&gt; <span class="cstat-no" title="statement not covered" >a.concat(b),</span> []);
+	.reduce((a, b) =&gt; <span class="cstat-no" title="statement not covered">a.concat(b),</span> []);
 &nbsp;
 const preprocess = opts =&gt; {
-<span class="cstat-no" title="statement not covered" >	opts = mergeWithPkgConf(opts);</span>
-<span class="cstat-no" title="statement not covered" >	opts = normalizeOpts(opts);</span>
-<span class="cstat-no" title="statement not covered" >	opts = getIgnores(opts);</span>
-<span class="cstat-no" title="statement not covered" >	opts.extensions = DEFAULT_EXTENSION.concat(opts.extensions || []);</span>
+<span class="cstat-no" title="statement not covered">	opts = mergeWithPkgConf(opts);</span>
+<span class="cstat-no" title="statement not covered">	opts = normalizeOpts(opts);</span>
+<span class="cstat-no" title="statement not covered">	opts = getIgnores(opts);</span>
+<span class="cstat-no" title="statement not covered">	opts.extensions = DEFAULT_EXTENSION.concat(opts.extensions || []);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >	return opts;</span>
+<span class="cstat-no" title="statement not covered">	return opts;</span>
 }
 &nbsp;
 exports.DEFAULT_IGNORE = DEFAULT_IGNORE;
@@ -1022,10 +1020,11 @@ exports.getIgnores = getIgnores;
 exports.getGitIgnores = getGitIgnores;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 21:35:34 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 21:33:48 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
