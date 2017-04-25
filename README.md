@@ -1,6 +1,6 @@
 # npmtest-xo
 
-#### test coverage for  [xo (v0.18.1)](https://github.com/sindresorhus/xo#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-xo.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-xo) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-xo.svg)](https://travis-ci.org/npmtest/node-npmtest-xo)
+#### basic test coverage for  [xo (v0.18.1)](https://github.com/sindresorhus/xo#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-xo.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-xo) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-xo.svg)](https://travis-ci.org/npmtest/node-npmtest-xo)
 
 #### JavaScript happiness style linter ❤️
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-xo/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-xo/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-xo/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-xo/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-xo/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-xo/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-xo/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-xo/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-xo/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-xo/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-xo/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-xo/build/coverage.html/index.html)
 
